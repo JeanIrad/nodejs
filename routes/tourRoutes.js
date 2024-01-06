@@ -1,7 +1,7 @@
 const express = require('express');
 
 const tourController = require('../controllers/tourController');
-// const { get } = require('mongoose');
+
 const {
   getAllTours,
   createTour,
@@ -12,6 +12,7 @@ const {
   getTourStats,
   getMonthlyPlan,
 } = tourController;
+
 const router = express.Router();
 
 router.route('/top-5-cheap').get(aliasTopTours, getAllTours);
